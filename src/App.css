@@ -1,7 +1,22 @@
 .App {
   text-align: center;
 }
-
+.primary-text{
+  color: #94618e !important;
+}
+.primary-bg{
+  background-color: #94618e !important;
+}
+.btn-dark{
+  border: none !important;
+  background-color: rgb(71 85 105) !important;
+}
+.btn-dark:hover{
+  background-color: #282c34 !important;
+}
+.secondery-text{
+  color: rgb(71 85 105) !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,0 +1,61 @@
+[
+    {
+        "_id":1,
+        "email":"redwan@gmail.com",
+        "name": "wodden Chair",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
+        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
+        "quantity" : 20,
+        "supplier":"redwan",
+        "price":"300$"
+      },
+    {
+        "_id":2,
+        "email":"redwan@gmail.com",
+        "name": "wodden Chair",
+        "image": "https://static.thehoneycombers.com/wp-content/uploads/sites/2/2021/09/Online-furniture-Singapore-900x643.png",
+        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
+        "quantity" : 20,
+        "supplier":"redwan",
+        "price":"300$"
+      },
+    {
+        "_id":3,
+        "email":"redwan@gmail.com",
+        "name": "wodden Chair",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
+        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
+        "quantity" : 20,
+        "supplier":"redwan",
+        "price":"300$"
+      },
+    {
+        "_id":4,
+        "email":"redwan@gmail.com",
+        "name": "wodden Chair",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
+        "desc": "made with wood,highest comfortable with lowest price",
+        "quantity" : 20,
+        "supplier":"redwan",
+        "price":"300$"
+      },
+    {
+        "_id":5,
+        "email":"redwan@gmail.com",
+        "name": "wodden Chair",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
+        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
+        "quantity" : 20,
+        "supplier":"redwan",
+        "price":"300$"
+      },
+    {
+        "_id":6,
+        "name": "wodden Chair",
+        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
+        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
+        "quantity" : 20,
+        "supplier":"redwan",
+        "price":"300$"
+      }     
+]
