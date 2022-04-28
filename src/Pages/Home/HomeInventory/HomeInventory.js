@@ -11,10 +11,10 @@ const HomeInventory = () => {
   [homeItem])
   
   return (
-    <div>
-        <h1 className='secondery-text fw-bolder text-center'>ITEMS</h1>
+    <div className='container'>
+        <h1 className=' my-3 secondery-text fw-bolder text-center'>ITEMS</h1>
         <hr></hr>
-        <div className='mb-3 container mx-auto g-4 row row-cols-1 row-cols-lg-3'>
+        <div className='mb-3 mx-auto g-4 row row-cols-1 row-cols-lg-3'>
         {
             homeItem&& homeItem.map(item=><Item key={item._id} item={item}></Item>)
         }

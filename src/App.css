@@ -17,6 +17,9 @@
 .secondery-text{
   color: rgb(71 85 105) !important;
 }
+.secondery-bg{
+  background-color: #EEEEEE;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

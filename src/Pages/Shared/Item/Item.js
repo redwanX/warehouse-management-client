@@ -7,7 +7,7 @@ const Item = (props) => {
     <Col>
       <Card className="col-12 col-lg-12 shadow h-100">
         <Card.Img className='h-100' variant="top" src={image}/>
-        <Card.Body className="shadow-sm border border-top">
+        <Card.Body className="secondery-bg shadow-sm">
         <Card.Text> 
           <span className='d-flex justify-content-between'>
           <span className='d-block fw-bold fs-5 secondery-text'>{name}</span>

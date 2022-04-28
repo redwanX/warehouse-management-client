@@ -5,8 +5,8 @@ import banner2 from '../../../Images/Banner/banner-2.png'
 const Banner = () => {
   return (
      <div className='py-5'>
-        <div className='mb-5 mt-3 container-lg d-flex flex-lg-row flex-column-reverse text-center text-lg-start align-items-center  justify-content-around '>
-      <div className='w-100 bg-white'>
+      <div className='mb-5 mt-3 container-lg d-flex flex-lg-row flex-column-reverse text-center text-lg-start align-items-center  justify-content-around '>
+       <div className='w-100'>
         <h1 className='primary-text p-0 m-0 lh-1 fw-bolder display-1' >FURNITURE</h1>
         <h1 className='secondery-text p-0 m-0 lh-1 fw-bolder display-1' >HOUSE</h1>
         <small className='d-block my-2 secondery-text fw-bold'>Manage Every Single Sell Of yours! Track every panny, Predict your business future! why pen and paper when you can do everything Digitally!</small>
