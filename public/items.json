@@ -1,61 +1,62 @@
 [
     {
-        "_id":1,
-        "email":"redwan@gmail.com",
-        "name": "wodden Chair",
-        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
-        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
-        "quantity" : 20,
-        "supplier":"redwan",
-        "price":"300$"
+        "email":"redwanistbd@gmail.com",
+        "name": "Yuri Rattan Dresser",
+        "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/1.png",
+        "desc": "The Yuri Rattan dresser feature an inteicate craftmanship shrough its solid oak wood frame and finaly crafted rattan door to frature a beautiful woven look",
+        "quantity" : 44,
+        "sold":0,
+        "supplier":"Redwan Ahmed",
+        "price":"799.00$"
+      },
+     {
+        "email":"redwanistbd@gmail.com",
+        "name": "Nori Coffee Table",
+        "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/2.png",
+        "desc": "Simple yet chic, the Nori Rattan Coffee Table features intricate detailing and craftsmanship through its solid oak wood frame and finely crafted rattan base that will definitely blend seamlessly with your living room.",
+        "quantity" : 60,
+        "sold":0,
+        "supplier":"Redwan Ahmed",
+        "price":"399.00$"
       },
     {
-        "_id":2,
-        "email":"redwan@gmail.com",
-        "name": "wodden Chair",
-        "image": "https://static.thehoneycombers.com/wp-content/uploads/sites/2/2021/09/Online-furniture-Singapore-900x643.png",
-        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
-        "quantity" : 20,
-        "supplier":"redwan",
-        "price":"300$"
+        "email":"redwanistbd@gmail.com",
+        "name": "Ada TV Console",
+        "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/3.png",
+        "desc": "The diagonally spliced solid wood panels with 4 metal diagonal legs make the Ada TV Console both elegant and sophisticated, a practical and stylish addition to any home.",
+        "quantity" : 70,
+        "sold":0,
+        "supplier":"Redwan Ahmed",
+        "price":"699.00$"
       },
-    {
-        "_id":3,
-        "email":"redwan@gmail.com",
-        "name": "wodden Chair",
-        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
-        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
-        "quantity" : 20,
-        "supplier":"redwan",
-        "price":"300$"
+	{
+        "email":"redwanistbd@gmail.com",
+        "name": "Ada Bedside Table",
+        "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/4.png",
+        "desc": "The diagonally spliced solid wood panels with 4 metal diagonal legs make the Ada Bedside Table both elegant and sophisticated, a practical and stylish addition to any home.",
+        "quantity" : 45,
+        "sold":0,
+        "supplier":"Redwan Ahmed",
+        "price":"299.00$"
       },
-    {
-        "_id":4,
-        "email":"redwan@gmail.com",
-        "name": "wodden Chair",
-        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
-        "desc": "made with wood,highest comfortable with lowest price",
-        "quantity" : 20,
-        "supplier":"redwan",
-        "price":"300$"
+	{
+        "email":"redwanistbd@gmail.com",
+        "name": "Etsu Dining Chair",
+        "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/5.png",
+        "desc": "A timeless collection that easily integrates into any room, the Etsu Dining Chair features a raised, sleek profile that complements the natural beauty of white oak. ",
+        "quantity" : 65,
+        "sold":0,
+        "supplier":"Redwan Ahmed",
+        "price":"199.00$"
       },
-    {
-        "_id":5,
-        "email":"redwan@gmail.com",
-        "name": "wodden Chair",
-        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
-        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
-        "quantity" : 20,
-        "supplier":"redwan",
-        "price":"300$"
-      },
-    {
-        "_id":6,
-        "name": "wodden Chair",
-        "image": "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1580742487-resize.jpg?crop=1xw:1xh;center,top&resize=480:*",
-        "desc": "super compact,super slim,made with wood,highest comfortable with lowest price",
-        "quantity" : 20,
-        "supplier":"redwan",
-        "price":"300$"
-      }     
+	{
+        "email":"redwanistbd@gmail.com",
+        "name": "Penny Bed Frame",
+        "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/6.png",
+        "desc": "Featuring an oak wood frame and fabric headboard, the practical design of three drawers under the Penny Bed Frame instantly increases additional storage space for toys and commonly used clothes.",
+        "quantity" : 16,
+        "sold":0,
+        "supplier":"Redwan Ahmed",
+        "price":"799.00$"
+      }
 ]
