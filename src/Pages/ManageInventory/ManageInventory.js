@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import Item from '../Shared/Item/Item'
+import { toast } from 'react-toastify'
 import Loading from '../Shared/Loading/Loading'
 import TableData from '../TableData/TableData'
 import './TableData.css'
@@ -19,6 +19,20 @@ const ManageInventory = () => {
         })
     },
     [])
+
+    const deleteItem = (id)=>{
+        const confirm = window.confirm("Confirm Delete This Item?");
+        if(confirm){
+          console.log("confirmed");
+        axios.delete(`http://localhost:5000/deteteItem/${id}`)
+        .then(res=>{
+          toast("Item Deleted Succesfully!")
+          setItems(items.filter((item)=>item._id !==id));
+        })
+        }
+    }
+
+
   return (
     <div  style={{minHeight: 'calc(100vh - 116px - 74px)'}} className='container mb-3'>
         {
@@ -45,7 +59,7 @@ const ManageInventory = () => {
     </tr>
   </thead>
   <tbody>
-      {items.map(item=><TableData key={item._id} item={item}></TableData>)}
+      {items.map(item=><TableData key={item._id} deleteItem={deleteItem} item={item}></TableData>)}
   </tbody>
 </Table>
 
