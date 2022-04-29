@@ -4,8 +4,8 @@
         "name": "Yuri Rattan Dresser",
         "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/1.png",
         "desc": "The Yuri Rattan dresser feature an inteicate craftmanship shrough its solid oak wood frame and finaly crafted rattan door to frature a beautiful woven look",
-        "quantity" : 44,
-        "sold":0,
+        "quantity" : "44",
+        "sold":"0",
         "supplier":"Redwan Ahmed",
         "price":"799.00$"
       },
@@ -14,8 +14,8 @@
         "name": "Nori Coffee Table",
         "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/2.png",
         "desc": "Simple yet chic, the Nori Rattan Coffee Table features intricate detailing and craftsmanship through its solid oak wood frame and finely crafted rattan base that will definitely blend seamlessly with your living room.",
-        "quantity" : 60,
-        "sold":0,
+        "quantity" : "60",
+        "sold":"0",
         "supplier":"Redwan Ahmed",
         "price":"399.00$"
       },
@@ -24,7 +24,7 @@
         "name": "Ada TV Console",
         "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/3.png",
         "desc": "The diagonally spliced solid wood panels with 4 metal diagonal legs make the Ada TV Console both elegant and sophisticated, a practical and stylish addition to any home.",
-        "quantity" : 70,
+        "quantity" : "70",
         "sold":0,
         "supplier":"Redwan Ahmed",
         "price":"699.00$"
@@ -34,8 +34,8 @@
         "name": "Ada Bedside Table",
         "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/4.png",
         "desc": "The diagonally spliced solid wood panels with 4 metal diagonal legs make the Ada Bedside Table both elegant and sophisticated, a practical and stylish addition to any home.",
-        "quantity" : 45,
-        "sold":0,
+        "quantity" : "45",
+        "sold":"0",
         "supplier":"Redwan Ahmed",
         "price":"299.00$"
       },
@@ -44,8 +44,8 @@
         "name": "Etsu Dining Chair",
         "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/5.png",
         "desc": "A timeless collection that easily integrates into any room, the Etsu Dining Chair features a raised, sleek profile that complements the natural beauty of white oak. ",
-        "quantity" : 65,
-        "sold":0,
+        "quantity" : "65",
+        "sold":"0",
         "supplier":"Redwan Ahmed",
         "price":"199.00$"
       },
@@ -54,8 +54,8 @@
         "name": "Penny Bed Frame",
         "image": "https://raw.githubusercontent.com/redwanX/utilities/main/furnitures/6.png",
         "desc": "Featuring an oak wood frame and fabric headboard, the practical design of three drawers under the Penny Bed Frame instantly increases additional storage space for toys and commonly used clothes.",
-        "quantity" : 16,
-        "sold":0,
+        "quantity" : "16",
+        "sold":"0",
         "supplier":"Redwan Ahmed",
         "price":"799.00$"
       }
