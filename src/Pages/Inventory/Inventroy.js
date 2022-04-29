@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Button, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify';
 import Item from '../Shared/Item/Item';
 import Loading from '../Shared/Loading/Loading';
 
@@ -19,11 +20,21 @@ const Inventroy = () => {
   [])
   
   useEffect(()=>{
-    axios.put(`http://localhost:5000/quantityUpdate`,item)
+    axios.put(`http://localhost:5000/Update`,item)
     .then(res=>{
     })
   },[item])
   
+  const soldUpdate = ()=>{
+      const {quantity,sold,...rest}=item;
+      const newQuantity = parseInt(quantity)-1;
+      const newSold = parseInt(sold)+1;
+      if(newQuantity>=0){
+        setItem({...rest,quantity:newQuantity,sold:newSold});
+      }else{
+        toast("OUT OF STOCK");
+      }
+  }
 
 
   const updateQuantity =(e)=>{
@@ -44,7 +55,7 @@ const Inventroy = () => {
       <div className='row row-cols-1 g-4 row-cols-lg-2'>
       <Item item={item} invetory={true}></Item>
       <div>
-        <button className='btn btn-dark w-100 py-3'>Delivered</button>
+        <button className='btn btn-dark w-100 py-3' onClick={soldUpdate}>Delivered</button>
         <Form onSubmit={updateQuantity}>
         <Form.Group className='mt-3'>
             <Form.Control className='secondery-bg' type="number" name="quantity" placeholder="Quantity" required />
