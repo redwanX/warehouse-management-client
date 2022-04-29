@@ -1,13 +1,18 @@
 import React from 'react'
-import { Card, Col } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Item = (props) => {
     const {_id,email,name,image,desc,quantity,supplier,price} = props.item;
+    const navigate = useNavigate()
+    const redirectToUpdate = ()=>{
+        navigate(`/inventory/${_id}`);
+    }
   return (
     <Col>
-      <Card className="col-12 col-lg-12 shadow h-100">
-        <Card.Img className='h-100' variant="top" src={image}/>
-        <Card.Body className="secondery-bg shadow-sm">
+      <Card className=" position-relative col-12 col-lg-12 shadow h-100">
+        <Card.Img style={{height:"400px"}} variant="top" src={image}/>
+        <Card.Body className="mb-5 secondery-bg shadow-sm">
         <Card.Text> 
           <span className='d-flex justify-content-between'>
           <span className='d-block fw-bold fs-5 secondery-text'>{name}</span>
@@ -19,6 +24,7 @@ const Item = (props) => {
             <small className='d-block'>{desc}</small>
           </span>
           </Card.Text>
+          <button  onClick={redirectToUpdate} className=' rounded-bottom position-absolute py-2 btn-dark start-0 bottom-0 w-100'>Update</button>
         </Card.Body>
       </Card>
     </Col>
