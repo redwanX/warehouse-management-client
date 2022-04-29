@@ -1,0 +1,32 @@
+
+.table td{
+    vertical-align:middle;
+}
+.table tbody tr:nth-child(even){
+    background-color: #EEEEEE !important;
+}
+
+.table tbody tr:nth-child(odd){
+    background-color: white !important;
+}
+@media(max-width:992px) {
+    .table thead{
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width: 100%;
+    }
+    .table td{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .table td::before{
+        content: attr(data-lebel);
+        font-weight: bold;
+        color: #94618e;
+        margin-right:30px ;
+    }
+ 
+}

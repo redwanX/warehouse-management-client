@@ -11,6 +11,9 @@
   border: none !important;
   background-color: rgb(71 85 105) !important;
 }
+.dark-bg{
+  background-color: rgb(71 85 105) !important;
+}
 .btn-dark:hover{
   background-color: #282c34 !important;
 }
