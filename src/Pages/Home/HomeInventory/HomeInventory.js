@@ -9,7 +9,7 @@ const HomeInventory = () => {
   const navigate = useNavigate()
   const [homeItem,loading,setHomeItem] = useProdutcs("redwanistbd@gmail.com")
   return (
-    <div className='container'>
+    <div id="items" className='container'>
         <h1 className=' my-3 secondery-text fw-bolder text-center'>ITEMS</h1>
         <hr></hr>
         {

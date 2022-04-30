@@ -1,6 +1,6 @@
 import React from 'react'
-import Counter from '../../Counter/Counter'
 import Banner from '../Banner/Banner'
+import Counter from '../Counter/Counter'
 import HomeInventory from '../HomeInventory/HomeInventory'
 const Home = () => {
   return (

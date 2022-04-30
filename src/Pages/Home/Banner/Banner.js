@@ -10,7 +10,7 @@ const Banner = () => {
         <h1 className='primary-text p-0 m-0 lh-1 fw-bolder display-1' >FURNITURE</h1>
         <h1 className='secondery-text p-0 m-0 lh-1 fw-bolder display-1' >HOUSE</h1>
         <small className='d-block my-2 secondery-text fw-bold'>Manage Every Single Sell Of yours! Track every panny, Predict your business future! why pen and paper when you can do everything Digitally!</small>
-        <button className='btn btn-dark rounded-pill fw-bold px-3 py-2 my-2'>See Items</button>
+        <Button className='btn btn-dark rounded-pill fw-bold px-3 py-2 my-2' href="#items">See Items</Button>
       </div>
       <div className="col col-10 col-lg-6 mx-auto">
 
