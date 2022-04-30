@@ -5,6 +5,8 @@ import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import { async } from '@firebase/util';
+import axios from 'axios';
 const SocialAuth = () => {
   //Hooks
   const navigate = useNavigate();
@@ -22,9 +24,15 @@ const SocialAuth = () => {
 
   //If user wasnt login then take back to place form where it came (checkout)
   useEffect(()=>{
-      if(user){
-        navigate(from,{replace:true});
+      const tokenUpdate=async()=>{
+        if(user){
+          const email = user.user.email;
+          const {data}= await axios.post('http://localhost:5000/login',{email});
+          localStorage.setItem('authToken',data.token)
+          navigate(from,{replace:true});
+        }
       }
+      tokenUpdate();
     },[user]);
 
   //Loding

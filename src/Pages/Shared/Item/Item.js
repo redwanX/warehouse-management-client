@@ -19,9 +19,10 @@ const Item = (props) => {
           <span className='d-block fw-bolder fs-5 primary-text'>{name}</span>
           <span className='d-block lead fs-5 primary-text'>{price}$</span>
           </span>
+          {parseInt(quantity) ===0 && isFromInv?<span className='d-block pt-2 text-danger fw-bold fs-4 primary-text'>SOLD OUT!</span>:""}
           { isFromInv?<span className='d-block pt-2 secondery-text fw-bold fs-6'>ID: <span className='fw-light'>{_id}</span></span>:""}
           <span className='d-block secondery-text fw-bold fs-6'>Quantity: <span className='fw-light'>{quantity}</span></span>
-          { isFromInv?<span className='d-block secondery-text fw-bold fs-6'>Sold: <span className='fw-light'>{sold}</span></span>:""}
+          { isFromInv?<span className='d-block secondery-text fw-bold fs-6'>Total Sold: <span className='fw-light'>{sold}</span></span>:""}
           <span className='d-block  my-0 secondery-text fw-bold  fs-6 '>Supllier : <span className='fw-light'>{supplier}</span></span>
           <span>
             <span className='d-block pt-2 fw-bold secondery-text'>Description:</span>

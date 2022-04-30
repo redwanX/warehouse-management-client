@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Item from '../../Shared/Item/Item'
 import Loading from '../../Shared/Loading/Loading'
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import useProdutcs from '../../../Hooks/useProducts/useProdutcs';
 
 const HomeInventory = () => {
   const navigate = useNavigate()
-  const [homeItem,sethomeItems] = useState([])
-    const [loading,setLoading] = useState(true)
-    useEffect(()=>{
-        axios.get(`http://localhost:5000/homeproducts`,{
-        })
-        .then(res=>{
-          sethomeItems(res.data);
-          setLoading(false);
-        })
-        .catch(err=>{console.log("error: ",err);setLoading(false);})
-    },
-    [])
+  const [homeItem,loading,sethomeItems] = useProdutcs();
 
   return (
     <div className='container'>
@@ -28,7 +17,7 @@ const HomeInventory = () => {
         }
         <div className='mb-3  g-4 row row-cols-1 row-cols-lg-3'>
         {
-            homeItem && homeItem.map(item=><Item key={item._id} item={item}></Item>)
+            homeItem && homeItem.slice(0,6).map(item=><Item key={item._id} item={item}></Item>)
         }
         </div>
         <div className='w-100 mb-3 d-flex justify-content-center'>

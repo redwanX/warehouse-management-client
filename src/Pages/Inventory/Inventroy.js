@@ -44,7 +44,7 @@ const Inventroy = () => {
       if(newQuantity>=0){
         setItem({...rest,quantity:newQuantity,sold:newSold});
       }else{
-        toast("OUT OF STOCK");
+        toast("SOLD OUT!");
       }
   }
 

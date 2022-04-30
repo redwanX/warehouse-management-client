@@ -36,7 +36,7 @@ const AddItem = () => {
             const name =event.target.name.value;
             const price =parseFloat(event.target.price.value);
             const quantity =parseInt(event.target.quantity.value);
-            const sold = event.target.sold.value?parseInt(event.target.sold.value):0;
+            const sold = 0;
             const desc =event.target.desc.value;
             const supplier =event.target.supplier.value;
             const image =event.target.img.value;
@@ -73,10 +73,6 @@ const AddItem = () => {
             </Form.Control.Feedback>
           </Form.Group>
           
-          <Form.Group  className='mb-3' controlId="validationCustom03">
-            <Form.Control className='secondery-bg' name="sold" type="number" min="0" placeholder="Product Sold By Now" vlaue="0" />
-          </Form.Group>
-
           <Form.Group  className='mb-3' controlId="validationCustom04">
             <Form.Control className='secondery-bg' name="desc" type="text" placeholder="Product Description" required />
             <Form.Control.Feedback type="invalid">
