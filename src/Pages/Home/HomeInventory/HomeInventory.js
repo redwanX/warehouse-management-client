@@ -3,21 +3,11 @@ import Item from '../../Shared/Item/Item'
 import Loading from '../../Shared/Loading/Loading'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import useProdutcs from '../../../Hooks/useProducts/useProdutcs';
 
 const HomeInventory = () => {
   const navigate = useNavigate()
-  const [homeItem,setHomeItem] = useState([])
-  const [loading,setLoading] = useState(true)
-  
-  useEffect(()=>{
-      axios.get('http://localhost:5000/products?email=redwanistbd@gmail.com')
-      .then(res=>{
-        setHomeItem(res.data);
-        setLoading(false);
-      })
-  },
-  [])
-  
+  const [homeItem,loading,setHomeItem] = useProdutcs("redwanistbd@gmail.com")
   return (
     <div className='container'>
         <h1 className=' my-3 secondery-text fw-bolder text-center'>ITEMS</h1>

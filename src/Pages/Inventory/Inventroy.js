@@ -1,28 +1,41 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Button, Form } from 'react-bootstrap';
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify';
 import Item from '../Shared/Item/Item';
+import Loading from '../Shared/Loading/Loading';
 
 const Inventroy = () => {
   const id=useParams().id;
   const navigate = useNavigate()
   const [item,setItem] = useState({})
   
+  const [loading,setLoading] = useState(true)
+  
   useEffect(()=>{
+    setLoading(true);
     axios.get(`http://localhost:5000/singleProduct/${id}`)
     .then(res=>{
       setItem(res.data);
+      setLoading(false);
     })
+    .catch(err=>{console.log("error:",err);
+    setLoading(false);})
   },
   [])
   
   useEffect(()=>{
+    
     axios.put(`http://localhost:5000/update`,item)
     .then(res=>{
     })
+    .catch(err=>{console.log("error:",err);})
   },[item])
+
+  if(loading){
+    return <Loading></Loading>
+  }
   
   const soldUpdate = ()=>{
       const {quantity,sold,...rest}=item;

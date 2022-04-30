@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from '../../Counter/Counter'
 import Banner from '../Banner/Banner'
 import HomeInventory from '../HomeInventory/HomeInventory'
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
       <div className='secondery-bg'>
       <Banner></Banner>
       </div>
+      <Counter></Counter>
       <HomeInventory></HomeInventory>
     </div>
   )

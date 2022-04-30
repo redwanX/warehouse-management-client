@@ -17,7 +17,7 @@ const Item = (props) => {
         <Card.Text> 
           <span className='d-flex flex-column flex-lg-row align-items-center justify-content-between'>
           <span className='d-block fw-bolder fs-5 primary-text'>{name}</span>
-          <span className='d-block lead fs-5 primary-text'>{price}</span>
+          <span className='d-block lead fs-5 primary-text'>{price}$</span>
           </span>
           { isFromInv?<span className='d-block pt-2 secondery-text fw-bold fs-6'>ID: <span className='fw-light'>{_id}</span></span>:""}
           <span className='d-block secondery-text fw-bold fs-6'>Quantity: <span className='fw-light'>{quantity}</span></span>

@@ -34,16 +34,14 @@ const AddItem = () => {
         if(form.checkValidity()===true){
         
             const name =event.target.name.value;
-            const price =event.target.price.value;
-            const quantity =event.target.quantity.value;
-            const sold =event.target.sold.value?event.target.sold.value:"0";
+            const price =parseFloat(event.target.price.value);
+            const quantity =parseInt(event.target.quantity.value);
+            const sold = event.target.sold.value?parseInt(event.target.sold.value):0;
             const desc =event.target.desc.value;
             const supplier =event.target.supplier.value;
             const image =event.target.img.value;
             const body ={name,image,desc,quantity,sold,supplier,price};
             saveItem(event,body);
-            
-
           setValidated(false);
         }
       };

@@ -3,23 +3,16 @@ import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import useProdutcs from '../../Hooks/useProducts/useProdutcs'
 import Loading from '../Shared/Loading/Loading'
 import TableData from '../TableData/TableData'
 import './TableData.css'
 const ManageInventory = () => {
-    const [items,setItems] = useState([])
-    const [loading,setLoading] = useState(true)
     const navigate = useNavigate()
-    
-    useEffect(()=>{
-        axios.get('http://localhost:5000/products')
-        .then(res=>{
-          setItems(res.data);
-          setLoading(false);
-        })
-    },
-    [])
-
+    const [items,loading,setItems] = useProdutcs();
+    if(loading){
+      return <Loading></Loading>
+    }
     const deleteItem = (id)=>{
         const confirm = window.confirm("Confirm Delete This Item?");
         if(confirm){
@@ -35,9 +28,6 @@ const ManageInventory = () => {
 
   return (
     <div  style={{minHeight: 'calc(100vh - 116px - 74px)'}} className='container mb-3'>
-        {
-            loading?<Loading></Loading>:""
-        }
         <div className='d-flex justify-content-end'>
         <button className='btn btn-dark rounded-pill fw-bold px-3 py-2 my-2 ' onClick={()=>navigate('/addItem')} >Add Item +</button>
         </div>
