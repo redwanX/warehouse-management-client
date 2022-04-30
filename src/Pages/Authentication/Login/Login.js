@@ -1,3 +1,5 @@
+import { async } from '@firebase/util';
+import axios from 'axios';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useEffect, useRef, useState } from 'react'
 import { Button,Form } from 'react-bootstrap';
@@ -24,7 +26,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     
     useEffect(()=>{
-      if(userAuthenticate){
+      if(userAuthenticate && localStorage.getItem('authToken')){
         navigate(from,{replace:true});
       }
     },[userAuthenticate]);
@@ -36,20 +38,18 @@ const Login = () => {
       }
     },[error]);
 
-    useEffect(()=>{
-      if(user){
-        navigate(from,{replace:true});
-      }
-    },[user]);
+
 
     if(loading||loadingAuthenticate){
       return <Loading></Loading>
     }
-    const handleLogin = ()=>{
+    const handleLogin =async()=>{
           const email = emailRef.current.value;
           const password = passwordRef.current.value;
-          signInWithEmailAndPassword(email,password);
-          
+          await signInWithEmailAndPassword(email,password);
+          const {data}= await axios.post('http://localhost:5000/login',{email});
+          localStorage.setItem('authToken',data.token)
+          navigate(from,{replace:true});
     }
     const handleResetPassword = async ()=>{
       const email = emailRef.current.value;

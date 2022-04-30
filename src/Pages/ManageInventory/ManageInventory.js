@@ -10,6 +10,7 @@ import './TableData.css'
 const ManageInventory = () => {
     const navigate = useNavigate()
     const [items,loading,setItems] = useProdutcs();
+
     if(loading){
       return <Loading></Loading>
     }

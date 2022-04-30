@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
 import SocialAuth from '../SocialAuth/SocialAuth';
+import axios from 'axios';
 
 const Register = () => {
   const [userAuthenticate,loadingAuthenticate] = useAuthState(auth)
@@ -22,8 +23,10 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [sendEmailVerification, sending, emailError] = useSendEmailVerification(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-        useEffect(()=>{
-      if(userAuthenticate){
+    
+    
+    useEffect(()=>{
+      if(userAuthenticate && localStorage.getItem('authToken')){
         navigate('/',{replace:true});
       }
     },[userAuthenticate]);
@@ -52,6 +55,9 @@ const Register = () => {
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName: name });
       await sendEmailVerification(email)
+      const {data}= await axios.post('http://localhost:5000/login',{email});
+      localStorage.setItem('authToken',data.token)
+      navigate('/',{replace:true});
     }
     const handleSubmit = (event) => {
       event.preventDefault();

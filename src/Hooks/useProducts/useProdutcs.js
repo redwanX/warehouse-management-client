@@ -1,17 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-const useProdutcs = (email) => {
-    if(email){
-        email="?email=" +email;
-    }
-    else {
-        email="";
-    }
+const useProdutcs = () => {
     const [items,setItems] = useState([])
     const [loading,setLoading] = useState(true)
     useEffect(()=>{
-        axios.get(`http://localhost:5000/products${email}`)
+        axios.get(`http://localhost:5000/allproducts`)
         .then(res=>{
           setItems(res.data);
           setLoading(false);

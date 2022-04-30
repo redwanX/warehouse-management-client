@@ -12,9 +12,14 @@ const MyItems = () => {
     const [items ,setItems] = useState([]);
 
     useEffect(()=>{
-           if(user){
-            axios.get(`http://localhost:5000/products?email=${user?.email}`)
+      const authToken =localStorage.getItem('authToken');
+      if(user && authToken){
+
+              axios.get(`http://localhost:5000/products?email=${user?.email}`,{
+              headers:{authorization: `Bearer ${authToken}`}
+            })
             .then(res=>{
+                console.log("yes authorized!");
                 setItems(res.data);
             })
             .catch(err=>{console.log("error: ",err)})

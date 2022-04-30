@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div>
-   <Navbar className='py-3 fw-bold shadow-sm' sticky='top' collapseOnSelect expand="lg" bg="light" variant="light">
+   <Navbar className='py-3 fw-bold secondery-bg' sticky='top' collapseOnSelect expand="lg">
   <Container>
   <Navbar.Brand as = {Link} to='/' className="primary-text">FURNITURE HOUSE</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -3,13 +3,24 @@ import Item from '../../Shared/Item/Item'
 import Loading from '../../Shared/Loading/Loading'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import useProdutcs from '../../../Hooks/useProducts/useProdutcs';
 
 const HomeInventory = () => {
   const navigate = useNavigate()
-  const [homeItem,loading,setHomeItem] = useProdutcs("redwanistbd@gmail.com")
+  const [homeItem,sethomeItems] = useState([])
+    const [loading,setLoading] = useState(true)
+    useEffect(()=>{
+        axios.get(`http://localhost:5000/homeproducts`,{
+        })
+        .then(res=>{
+          sethomeItems(res.data);
+          setLoading(false);
+        })
+        .catch(err=>{console.log("error: ",err);setLoading(false);})
+    },
+    [])
+
   return (
-    <div id="items" className='container'>
+    <div className='container'>
         <h1 className=' my-3 secondery-text fw-bolder text-center'>ITEMS</h1>
         <hr></hr>
         {
