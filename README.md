@@ -1,9 +1,9 @@
 # FURNITURE HOUSE
 
 ## LIVE LINKS FOR [FURNITURE HOUSE](https://furniture-house-d2811.web.app/)
-# LIVE LINK : https://furniture-house-d2811.web.app/
-# CLIENT SIDE : https://furniture-house-d2811.web.app/
-# SERVER SIDE : https://mysterious-wildwood-99766.herokuapp.com/
+### LIVE LINK : https://furniture-house-d2811.web.app/
+### CLIENT SIDE : https://furniture-house-d2811.web.app/
+### SERVER SIDE : https://mysterious-wildwood-99766.herokuapp.com/
 
 
 ## SHORT DESCRIPTION
