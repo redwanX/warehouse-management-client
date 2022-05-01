@@ -4,8 +4,6 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import Loading from '../Loading/Loading';
-
 const Header = () => {
   const [user] = useAuthState(auth);
   const logOut=()=>{
@@ -28,6 +26,7 @@ const Header = () => {
         <Nav.Link as={Link} to='/manageInventory' >Manage Items</Nav.Link>
         <Nav.Link as={Link} to='/myItems' >My Items</Nav.Link>
         <Nav.Link as={Link} to='/addItem' >Add Item</Nav.Link>
+        <Nav.Link as={Link} to='/profile' >Profile</Nav.Link>
         <Nav.Link onClick={logOut} >Logout</Nav.Link>
         </>
         :

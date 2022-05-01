@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap'
+import { useAuthState } from 'react-firebase-hooks/auth'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import auth from '../../firebase.init'
 import useProdutcs from '../../Hooks/useProducts/useProdutcs'
 import Loading from '../Shared/Loading/Loading'
 import TableData from '../TableData/TableData'
@@ -10,15 +12,16 @@ import './TableData.css'
 const ManageInventory = () => {
     const navigate = useNavigate()
     const [items,loading,setItems] = useProdutcs();
-
-    if(loading){
+     const [user, userLoading, error] = useAuthState(auth)
+    if(loading||userLoading){
       return <Loading></Loading>
     }
     const deleteItem = (id)=>{
         const confirm = window.confirm("Confirm Delete This Item?");
         if(confirm){
-          console.log("confirmed");
-        axios.delete(`http://localhost:5000/deteteItem/${id}`)
+        const email = user?.user?.email || user?.email;
+        const currnt_product =items.find(item=>item._id===id); 
+        axios.delete(`https://mysterious-wildwood-99766.herokuapp.com/deteteItem/${id}?email=${email}&name=${currnt_product.name}&action=delete`)
         .then(res=>{
           toast("Item Deleted Succesfully!")
           setItems(items.filter((item)=>item._id !==id));

@@ -25,13 +25,12 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
    
     let from = location.state?.from?.pathname || "/";
-    
     useEffect(()=>{
       const tokenUpdate = async()=>{ 
       if(userAuthenticate){
         setTokenLoading(true);
         const email = userAuthenticate.email;
-        const {data}= await axios.post('http://localhost:5000/login',{email});
+        const {data}= await axios.post('https://mysterious-wildwood-99766.herokuapp.com/login',{email});
         localStorage.setItem('authToken',data.token)
         setTokenLoading(false);
         navigate(from,{replace:true});

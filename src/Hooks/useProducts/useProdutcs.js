@@ -5,7 +5,7 @@ const useProdutcs = () => {
     const [items,setItems] = useState([])
     const [loading,setLoading] = useState(true)
     useEffect(()=>{
-        axios.get(`http://localhost:5000/allproducts`)
+        axios.get(`https://mysterious-wildwood-99766.herokuapp.com/allproducts`)
         .then(res=>{
           setItems(res.data);
           setLoading(false);

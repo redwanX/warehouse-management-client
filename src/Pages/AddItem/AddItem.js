@@ -16,11 +16,14 @@ const AddItem = () => {
         if(user){
             const email =user.email?user.email:"redwan@gmail.com";
             body = {email,...body};
-            axios.post('http://localhost:5000/addproduct',body)
+            const confirm= window.confirm("Confirm Add This Item?")
+            if(confirm){
+              axios.post(`https://mysterious-wildwood-99766.herokuapp.com/addproduct?email=${email}&name=${body.name}&action=add`,body)
             .then(res=>{
                 toast("Added Item Succesfully");
                 e.target.reset();
             })
+            }
         }
     }
 

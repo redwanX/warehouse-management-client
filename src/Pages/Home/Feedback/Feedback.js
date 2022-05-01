@@ -31,7 +31,7 @@ const Feedback = () => {
     const email = e?.target?.email?.value;
     const feedback = e?.target?.feedback?.value;
     if(email && feedback){
-      axios.post('http://localhost:5000/feedback',{email,feedback})
+      axios.post('https://mysterious-wildwood-99766.herokuapp.com/feedback',{email,feedback})
       .then(res=>{
         toast("FeedBack Received! Thank You!");
         e.target.reset();
@@ -56,7 +56,7 @@ const Feedback = () => {
             <div className='row g-4 row-cols-1 row-cols-lg-2'>
              <div className='col'>
                  <img className='w-100'  src={feedbackImage} alt="" />
-                 <h1 className='carousel-caption'>Text</h1>
+                
              </div>
              <div className='col d-flex flex-column justify-content-center'>
               <div>

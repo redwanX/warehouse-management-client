@@ -15,7 +15,7 @@ const Inventroy = () => {
   
   useEffect(()=>{
     setLoading(true);
-    axios.get(`http://localhost:5000/singleProduct/${id}`)
+    axios.get(`https://mysterious-wildwood-99766.herokuapp.com/singleProduct/${id}`)
     .then(res=>{
       setItem(res.data);
       setLoading(false);
@@ -27,7 +27,7 @@ const Inventroy = () => {
   
   useEffect(()=>{
     
-    axios.put(`http://localhost:5000/update`,item)
+    axios.put(`https://mysterious-wildwood-99766.herokuapp.com/update`,item)
     .then(res=>{
     })
     .catch(err=>{console.log("error:",err);})
