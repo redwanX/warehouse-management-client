@@ -48,7 +48,7 @@ const AddItem = () => {
 
   return (
     <div  style={{minHeight: 'calc(100vh - 116px - 74px)'}} className='container mb-3'>
-        <h3 className=' mt-5 secondery-text fw-bold text-center'>ADD ITEM</h3>
+        <h3 className=' mt-5 secondery-text fw-bold text-center'>ADD INVENTORY ITEM</h3>
         <hr></hr>
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
         

@@ -1,7 +1,9 @@
 import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
@@ -10,20 +12,27 @@ import TableData from '../TableData/TableData';
 const MyItems = () => {
     const [user,loading] = useAuthState(auth);
     const [items ,setItems] = useState([]);
-
+    const [itemsLoading,setItemsloading] = useState(false);
+    const navigate = useNavigate();
     useEffect(()=>{
       const authToken =localStorage.getItem('authToken');
       if(user && authToken){
-
+            setItemsloading(true);
               axios.get(`http://localhost:5000/products?email=${user?.email}`,{
               headers:{authorization: `Bearer ${authToken}`}
             })
             .then(res=>{
-                console.log("yes authorized!");
                 setItems(res.data);
+                setItemsloading(false);
             })
-            .catch(err=>{console.log("error: ",err)})
+            .catch(err=>{
+              if(err.response.status ===401 || err.response.status ===403){
+                signOut(auth)
+                navigate('/login')
+              }
+            })
            }
+           
         },
     [user])
 
@@ -39,7 +48,7 @@ const MyItems = () => {
         }
     }
     
-    if(loading){
+    if(loading || itemsLoading){
         return <Loading></Loading>
     }
 

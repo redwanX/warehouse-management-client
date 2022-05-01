@@ -11,6 +11,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialAuth from '../SocialAuth/SocialAuth';
 const Login = () => {
   const [userAuthenticate,loadingAuthenticate] = useAuthState(auth)
+    const [tokenloading,setTokenLoading] = useState(false);
     const [validated, setValidated] = useState(false);
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -26,9 +27,17 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     
     useEffect(()=>{
-      if(userAuthenticate && localStorage.getItem('authToken')){
+      const tokenUpdate = async()=>{ 
+      if(userAuthenticate){
+        setTokenLoading(true);
+        const email = userAuthenticate.email;
+        const {data}= await axios.post('http://localhost:5000/login',{email});
+        localStorage.setItem('authToken',data.token)
+        setTokenLoading(false);
         navigate(from,{replace:true});
       }
+    }
+      tokenUpdate();
     },[userAuthenticate]);
 
  
@@ -40,16 +49,13 @@ const Login = () => {
 
 
 
-    if(loading||loadingAuthenticate){
+    if(loading||loadingAuthenticate||tokenloading){
       return <Loading></Loading>
     }
-    const handleLogin =async()=>{
+    const handleLogin =()=>{
           const email = emailRef.current.value;
           const password = passwordRef.current.value;
-          await signInWithEmailAndPassword(email,password);
-          const {data}= await axios.post('http://localhost:5000/login',{email});
-          localStorage.setItem('authToken',data.token)
-          navigate(from,{replace:true});
+          signInWithEmailAndPassword(email,password);
     }
     const handleResetPassword = async ()=>{
       const email = emailRef.current.value;

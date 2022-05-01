@@ -26,9 +26,15 @@ const Register = () => {
     
     
     useEffect(()=>{
-      if(userAuthenticate && localStorage.getItem('authToken')){
-        navigate('/',{replace:true});
+      const tokenUpdate = async()=>{ 
+        if(userAuthenticate){
+          const email = userAuthenticate.email;
+          const {data}= await axios.post('http://localhost:5000/login',{email});
+          localStorage.setItem('authToken',data.token)
+          navigate('/',{replace:true});
+        }
       }
+        tokenUpdate();
     },[userAuthenticate]);
 
     useEffect(()=>{
@@ -55,9 +61,6 @@ const Register = () => {
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName: name });
       await sendEmailVerification(email)
-      const {data}= await axios.post('http://localhost:5000/login',{email});
-      localStorage.setItem('authToken',data.token)
-      navigate('/',{replace:true});
     }
     const handleSubmit = (event) => {
       event.preventDefault();
