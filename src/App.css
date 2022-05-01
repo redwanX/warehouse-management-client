@@ -4,6 +4,10 @@
 .primary-text{
   color: #00897B !important;
 }
+.light-text{
+  color: #EEEEEE !important;
+  
+}
 .primary-bg{
   background-color: #00897B !important;
 }

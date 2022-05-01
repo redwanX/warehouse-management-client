@@ -3,9 +3,9 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div>
-        <div className='footer bg-dark text-light'>
+        <div className='footer dark-bg light-text'>
            <h4>FURNITURE HOUSE</h4> 
-            <small  className='text-secondary'> ©{new Date().getFullYear()} All rights reserved.</small >
+            <small  className='light-text'> ©{new Date().getFullYear()} All rights reserved.</small >
             
         </div>
     </div>

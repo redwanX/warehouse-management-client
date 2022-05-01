@@ -9,7 +9,7 @@ const HomeInventory = () => {
   const [homeItem,loading,sethomeItems] = useProdutcs();
 
   return (
-    <div className='container'>
+    <div id="items" className='container'>
         <h1 className=' my-3 secondery-text fw-bolder text-center'>ITEMS</h1>
         <hr></hr>
         {

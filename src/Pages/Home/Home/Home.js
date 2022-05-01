@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../Banner/Banner'
 import Counter from '../Counter/Counter'
+import Feedback from '../Feedback/Feedback'
 import HomeInventory from '../HomeInventory/HomeInventory'
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       </div>
       <Counter></Counter>
       <HomeInventory></HomeInventory>
+      <Feedback></Feedback>
     </div>
   )
 }
