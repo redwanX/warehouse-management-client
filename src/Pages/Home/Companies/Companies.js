@@ -7,7 +7,7 @@ import company5 from '../../../Images/Company/5.jpg'
 const Companies = () => {
     const companies = [company1,company2,company3,company4,company5];
   return (
-    <div className='container my-3'>
+    <div className='container py-5'>
         <h1 className=' mt-5 secondery-text fw-bold text-center'>TOP COMPANYS</h1>
         <h3 className='primary-text fw-bold text-center'>WHO BELEIVES IN US</h3>
         <hr />

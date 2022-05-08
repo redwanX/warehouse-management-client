@@ -48,10 +48,10 @@ const Feedback = () => {
     }
   }
   return (
-    <div className='mt-5 py-5 secondery-bg'>
+    <div className='py-5 secondery-bg'>
         
         <div className='container'>
-        <h1 className=' my-3 secondery-text fw-bolder text-center'>Feed Back</h1>
+        <h1 className=' my-3 secondery-text fw-bolder text-center'>FEED BACK</h1>
         <hr></hr>
             <div className='row g-4 row-cols-1 row-cols-lg-2'>
              <div className='col'>
@@ -71,7 +71,7 @@ const Feedback = () => {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label className='fw-bold primary-text'>Feed Back:</Form.Label>
+                <Form.Label className='fw-bold primary-text'>Feed Back</Form.Label>
                 <Form.Control name="feedback" placeholder='FeedBack Or Suggestion' as="textarea" rows={5} required />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">

@@ -81,7 +81,7 @@ const MyItems = () => {
           </tbody>
           </Table>
           :
-          <small className='secondery-text fw-bold d-block text-center'>You Dont Have Any Item</small>
+          <small className='secondery-text mt-5 fw-bold d-block text-center'>You Dont Have Any Item</small>
         }
 
         </div>

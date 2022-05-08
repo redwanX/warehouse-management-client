@@ -9,8 +9,8 @@ const HomeInventory = () => {
   const [homeItem,loading,sethomeItems] = useProdutcs();
 
   return (
-    <div id="items" className='container'>
-        <h1 className=' my-3 secondery-text fw-bolder text-center'>ITEMS</h1>
+    <div id="items" className='container py-5'>
+        <h1 className=' py-3 secondery-text fw-bolder text-center'>ITEMS</h1>
         <hr></hr>
         {
           loading?<Loading></Loading>:""

@@ -66,8 +66,8 @@ const Profile = () => {
         </div>
         <div className=' row row-cols-1 g-4 row-cols-lg-3'>
           <CounterCard color="dark" title="CURRENT TOTAL PRODUCTS" data={myItems?.totalItem?myItems.totalItem:0}></CounterCard>
-          <CounterCard color="primary" title="SELLS FORM AVAILABLE PRODUCTS" data={myItems?.sells?myItems.sells:0}></CounterCard>
-          <CounterCard color="dark" title="REVENEWS FORM AVAILABLE PRODUCTS" data={myItems?.revenew?processNUmber(myItems?.revenew)+'$':'0$'}></CounterCard>
+          <CounterCard color="primary" title="SELLS FROM AVAILABLE PRODUCTS" data={myItems?.sells?myItems.sells:0}></CounterCard>
+          <CounterCard color="dark" title="REVENEWS FROM AVAILABLE PRODUCTS" data={myItems?.revenew?processNUmber(myItems?.revenew)+'$':'0$'}></CounterCard>
       </div> 
         <h3 className=' mt-5 secondery-text fw-bold text-center'>PRODUCT ADD/DELETE ACTIVITIES</h3>
         <hr></hr>

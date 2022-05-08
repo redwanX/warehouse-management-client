@@ -27,7 +27,7 @@ const Counter = () => {
   }
  
   return (
-    <div className='container'>
+    <div className='container py-5'>
       <h1 className=' my-3 secondery-text fw-bolder text-center'>COUNTS</h1>
         <hr></hr>
       <div className=' row row-cols-1 g-4 row-cols-lg-3'>
