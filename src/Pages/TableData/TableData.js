@@ -17,7 +17,7 @@ const TableData = (props) => {
     <td className='fw-normal text-center' data-lebel="Supplier">{supplier}</td>
     <td  className='fw-normal'  style={{textAlign:"justify"}} data-lebel="Description "><small>{desc}</small></td>
     <td className='flex-column align-items-center justify-content-center'><button className='btn btn-dark mb-1  w-100' onClick={()=>deleteItem(_id)}>Delete</button>
-    {myItems?<button className='btn btn-dark  w-100' onClick={()=>navigate(`/inventory/${_id}`)}>Update</button>:""}
+    <button className='btn btn-dark  w-100' onClick={()=>navigate(`/inventory/${_id}`)}>Update</button>
     </td>
   </tr>
   )
