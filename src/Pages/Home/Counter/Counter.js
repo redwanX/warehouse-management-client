@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
-import useProdutcs from '../../../Hooks/useProducts/useProdutcs';
 import processNUmber from '../../../utils/processnumber'
-import Loading from '../../Shared/Loading/Loading';
 import CounterCard from './CounterCard';
 
-const Counter = () => {
-  const [items,loading,setItems] = useProdutcs();
+const Counter = ({items}) => {
+ 
   const [totalProduct,setTotalProduct] = useState(-1);
   const [totalSell,setTotalSell] = useState(-1);
   const [totalRevenew,setTotalRevenew] = useState(-1);
-  if(loading){
-    return <Loading></Loading>
-  }
   if(items.length && totalProduct===-1 && totalSell===-1&& totalRevenew===-1){
       let totalS=0;
       let totalR=0;
