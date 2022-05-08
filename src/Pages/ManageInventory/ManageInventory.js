@@ -21,7 +21,7 @@ const ManageInventory = () => {
         if(confirm){
         const email = user?.user?.email || user?.email;
         const currnt_product =items.find(item=>item._id===id); 
-        axios.delete(`https://mysterious-wildwood-99766.herokuapp.com/deteteItem/${id}?email=${email}&name=${currnt_product.name}&action=delete`)
+        axios.delete(`https://mysterious-wildwood-99766.herokuapp.com/deleteItem/${id}?email=${email}&name=${currnt_product.name}&action=delete`)
         .then(res=>{
           toast("Item Deleted Succesfully!")
           setItems(items.filter((item)=>item._id !==id));

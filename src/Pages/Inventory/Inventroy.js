@@ -61,7 +61,7 @@ const Inventroy = () => {
     <div  style={{minHeight: 'calc(100vh - 116px - 74px)'}} className='container mb-3'>
       <div className='row row-cols-1 g-4 row-cols-lg-2'>
       <Item item={item} invetory={true}></Item>
-      <div>
+      <div className='my-auto'>
         <h3 className=' mt-5 secondery-text fw-bold text-center'>RESTOCK THE ITEM</h3>
         <Form onSubmit={updateQuantity}>
         <Form.Group className='my-3'>
