@@ -7,6 +7,7 @@
 
 
 ## SHORT DESCRIPTION
+This Repository is for client side code of FURNITURE HOUSE.
 This is a furniture inventory management Website for multiple user . Means multiple user can create and account here and manage his furniture business. Which makes easy to manage business calculations!
 
 ## FEATURES AND FUNCTIONALITIES
