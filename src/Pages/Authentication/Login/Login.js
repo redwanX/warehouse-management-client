@@ -1,4 +1,3 @@
-import { async } from '@firebase/util';
 import axios from 'axios';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useEffect, useRef, useState } from 'react'
@@ -51,10 +50,10 @@ const Login = () => {
     if(loading||loadingAuthenticate||tokenloading){
       return <Loading></Loading>
     }
-    const handleLogin =()=>{
+    const handleLogin =async()=>{
           const email = emailRef.current.value;
           const password = passwordRef.current.value;
-          signInWithEmailAndPassword(email,password);
+          await signInWithEmailAndPassword(email,password);
     }
     const handleResetPassword = async ()=>{
       const email = emailRef.current.value;

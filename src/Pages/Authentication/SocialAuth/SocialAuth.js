@@ -35,8 +35,8 @@ const SocialAuth = () => {
       tokenUpdate();
     },[user]);
 
-  const socialLogin = ()=>{
-    signInwithGoogle();
+  const socialLogin = async()=>{
+    await signInwithGoogle();
 }
   //Loding
   if(loading){
